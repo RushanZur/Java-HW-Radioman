@@ -1,44 +1,55 @@
 public class Radio {
 
-    public int numberStation = 2;
-    public int volume = 1;
-    public int maxVolume = 10;
-    public int minVolume = 2;
-    public int maxStation = 10;
-    public int minStation = 0;
-    public int statNumber = 10;
-    public int volUp = 1;
-    public int volDown = 1;
-    public boolean on = true;
-
-    public Radio(int numberStation, int volume, int maxVolume, int minVolum, int maxStation, int minStation, int statNumber, int volUp, int volDown, boolean on) {
-        this.numberStation = numberStation;
-        this.volume = volume;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.maxStation = maxStation;
-        this.minStation = minStation;
-        this.statNumber = statNumber;
-        this.volUp = volUp;
-        this.volDown = volDown;
-        this.on = on;
-    }
-
+    private int numberStation;
+    private int volume;
+    private int maxVolume = 10;
+    private int minVolume = 0;
+    private int maxStation = 9;
+    private int minStation = 0;
     public Radio() {
     }
 
-    public Radio(int statNumber) {
-        statNumber = statNumber + volume;
+    public Radio(int numberStation) {
 
+        numberStation = numberStation + 1;
+        if (numberStation > maxStation) {
+            numberStation = minStation;
+        }
+        if (numberStation < minStation) {
+            numberStation = maxStation;
+        }
+        this.numberStation = numberStation;
+
+        //Для звука нужно отдельно создавать?
+        volume = volume + 1;
+        if (volume > maxVolume) {
+            volume = maxVolume;
+        }
+        if (volume < minVolume) {
+            volume = minVolume;
+        }
+        this.volume = volume;
+    }
+
+    public void setNumberStation(int numberStation) {
+        // сеттер для выбора станции пользателем
+        if (numberStation <= maxStation) {
+            this.numberStation = numberStation;
+        } else {
+            System.out.println("Такой станции не существует");
+        }
+        // если номер станции меньше или равно 10, то номер станции вводится как есть?
+        if (numberStation >= minStation) {
+            this.numberStation = numberStation;
+        } else {
+            System.out.println("Такой станции не существует");
+        }
     }
 
     public int getNumberStation() {
         return numberStation;
     }
 
-    public void setNumberStation(int numberStation) {
-        this.numberStation = numberStation;
-    }
 
     public int getVolume() {
         return volume;
@@ -78,38 +89,6 @@ public class Radio {
 
     public void setMinStation(int minStation) {
         this.minStation = minStation;
-    }
-
-    public int getStatNumber() {
-        return statNumber;
-    }
-
-    public void setStatNumber(int statNumber) {
-        this.statNumber = statNumber;
-    }
-
-    public int getVolUp() {
-        return volUp;
-    }
-
-    public void setVolUp(int volUp) {
-        this.volUp = volUp;
-    }
-
-    public int getVolDown() {
-        return volDown;
-    }
-
-    public void setVolDown(int volDown) {
-        this.volDown = volDown;
-    }
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
     }
 
 }
