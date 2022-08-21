@@ -4,21 +4,34 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
     Radio radio = new Radio();
     @Test
-    public void shouldUseDefaultConstructor() {
+    void nextStation() {
         Radio radio = new Radio();
-        assertEquals(0, radio.getNumberStation());
-        assertEquals(0, radio.getVolume());
-        assertEquals(10, radio.getMaxVolume());
-        assertEquals(0, radio.getMinVolume());
-        assertEquals(9, radio.getMaxStation());
-        assertEquals(0, radio.getMinStation());
+        radio.setNumberStation(3);
+        radio.increaseStation();
+        assertEquals(4, radio.getNumberStation());
+
     }
 
+    @Test
+    void previousStation() {
+        Radio radio = new Radio();
+        radio.setNumberStation(6);
+        radio.decreaseStation();
+        assertEquals(5, radio.getNumberStation());
+    }
+    @Test
+    void increaseVolume () {
+        Radio radio = new Radio();
+        radio.setVolume(7);
+        radio.increaseVolume();
+        assertEquals(8, radio.getVolume());
+    }
 
     @Test
-    public void RadioStationUp() {
-        Radio radio = new Radio(10);
-
-        assertEquals(0, radio.getNumberStation());
+    void decreaseVolume () {
+        Radio radio = new Radio();
+        radio.setVolume(4);
+        radio.decreaseVolume();
+        assertEquals(3, radio.getVolume());
     }
 }
