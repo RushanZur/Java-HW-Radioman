@@ -1,79 +1,26 @@
 public class Radio {
-// flexiable
-
-    public int getNumberStation() {
-        return numberStation;
-    }
-
-    public int getMaxNumberStation() {
-        return maxNumberStation;
-    }
-
-    public void setMaxNumberStation(int maxNumberStation) {
-        this.maxNumberStation = maxNumberStation;
-    }
-
-    public int getMinNumberStation() {
-        return minNumberStation;
-    }
-
-    public void setMinNumberStation(int minNumberStation) {
-        this.minNumberStation = minNumberStation;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-
-
     private int numberStation;
     private int maxNumberStation = 10;
-    private int minNumberStation;
+    private int minNumberStation = 0;
     private int volume;
-
-    // как бы константа значения звука
     private final int maxVolume = 100;
     private final int minVolume = 0;
 
-
-    public void increaseVolume() {
-        if (volume < maxVolume) {
-            volume += 1;
-        }else {
-            volume = minVolume;
-        }
+    public Radio () {
     }
 
-    public void decreaseVolume() {
-        if (volume > minVolume) {
-            volume -= 1;
-        }else {
-            volume = maxVolume;
-        }
+    public Radio(int numberStation, int maxNumberStation) {
+        this.numberStation = numberStation;
+        this.maxNumberStation = maxNumberStation;
     }
 
-    public void nextNumberStation() {
-        if (numberStation >= maxNumberStation) {
-            setNumberStation(minNumberStation);
-        } else {
-            numberStation = numberStation + 1;
-        }
+    public Radio(int volume) {
+        this.volume = volume;
     }
+    public int getNumberStation() {
 
-
-    public void prevNumberStation() {
-        if (numberStation <= minNumberStation) {
-            setNumberStation(maxNumberStation);
-        } else {
-            numberStation = numberStation - 1;
-        }
+        return numberStation;
     }
-
 
     public void setNumberStation(int numberStation) {
 
@@ -87,15 +34,67 @@ public class Radio {
         this.numberStation = numberStation;
     }
 
-    public void megaSetVolume(int volume) {
-        if (volume < minVolume) {
-            return;
-        }
-        if (volume > minVolume) {
-            return;
-        }
+    public int getMaxNumberStation() {
+
+        return maxNumberStation;
+    }
+
+    public void setMaxNumberStation(int maxNumberStation) {
+
+        this.maxNumberStation = maxNumberStation;
+    }
+
+    public int getMinNumberStation() {
+
+        return minNumberStation;
+    }
+
+    public void setMinNumberStation(int minNumberStation) {
+
+        this.minNumberStation = minNumberStation;
+    }
+
+    public int getVolume() {
+
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+
         this.volume = volume;
     }
 
+    public void increaseVolume() {
+        if (volume > maxVolume) {
+            volume = maxVolume - 1;
+        }
+        volume++;
+    }
+
+    public void decreaseVolume() {
+        if (volume <= minVolume) {
+            volume = minVolume + 1;
+        }
+        volume--;
+    }
+
+    public void nextNumberStation() {
+        if (numberStation < maxNumberStation) {
+            numberStation++;
+
+        } else {
+            numberStation = minNumberStation;
+        }
+    }
+
+
+    public void prevNumberStation() {
+        if (numberStation > minNumberStation) {
+            numberStation--;
+
+        } else {
+            numberStation = maxNumberStation;
+        }
+    }
 
 }

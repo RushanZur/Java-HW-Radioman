@@ -8,7 +8,7 @@ public class RadioTest {
     public void increaseVolumeMoreMax() {
         radio.setVolume(500);
         radio.increaseVolume();
-        assertEquals(0, radio.getVolume());
+        assertEquals(100, radio.getVolume());
     }
 
     @Test
@@ -36,14 +36,14 @@ public class RadioTest {
     void decreaseVolume() {
         radio.setVolume(0);
         radio.decreaseVolume();
-        assertEquals(100, radio.getVolume());
+        assertEquals(0, radio.getVolume());
     }
 
     @Test
     void decreaseVolumeMax() {
         radio.setVolume(-1);
         radio.decreaseVolume();
-        assertEquals(100, radio.getVolume());
+        assertEquals(0, radio.getVolume());
 
     }
 
