@@ -1,6 +1,6 @@
 public class Radio {
     private int numberStation;
-    private int maxNumberStation = 10;
+    private int maxNumberStation = 9;
     private int minNumberStation = 0;
     private int volume;
     private final int maxVolume = 100;
@@ -25,9 +25,11 @@ public class Radio {
     public void setNumberStation(int numberStation) {
 
         if (numberStation < minNumberStation) {
+            this.numberStation = maxNumberStation;
             return;
         }
         if (numberStation > maxNumberStation) {
+            this.numberStation = minNumberStation;
             return;
         }
 
@@ -81,7 +83,6 @@ public class Radio {
     public void nextNumberStation() {
         if (numberStation < maxNumberStation) {
             numberStation++;
-
         } else {
             numberStation = minNumberStation;
         }
@@ -91,7 +92,6 @@ public class Radio {
     public void prevNumberStation() {
         if (numberStation > minNumberStation) {
             numberStation--;
-
         } else {
             numberStation = maxNumberStation;
         }

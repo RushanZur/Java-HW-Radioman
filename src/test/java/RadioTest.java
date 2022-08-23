@@ -51,24 +51,21 @@ public class RadioTest {
     void nextNumberStationlowMin() {
         radio.setNumberStation(-5);
         radio.nextNumberStation();
-        assertEquals(1, radio.getNumberStation());
-        assertEquals(0, radio.getMinNumberStation());
+        assertEquals(0, radio.getNumberStation());
     }
 
     @Test
     void nextNumberStationMoreMax() {
-        radio.setNumberStation(50);
         radio.nextNumberStation();
-        assertEquals(1, radio.getNumberStation());
-        assertEquals(10, radio.getMaxNumberStation());
+        radio.setNumberStation(49);
+        assertEquals(0, radio.getNumberStation());
     }
 
     @Test
     void nextNumberStationMax() {
-        radio.setNumberStation(10);
+        radio.setNumberStation(9);
         radio.nextNumberStation();
         assertEquals(0, radio.getNumberStation());
-        assertEquals(10, radio.getMaxNumberStation());
     }
 
     @Test
@@ -80,17 +77,16 @@ public class RadioTest {
 
     @Test
     void numberStationMax() {
-        radio.setNumberStation(10);
-        radio.setMaxNumberStation(10);
-        assertEquals(10, radio.getMaxNumberStation());
+        radio.setNumberStation(9);
+        radio.setMaxNumberStation(9);
+        assertEquals(9, radio.getMaxNumberStation());
     }
 
     @Test
     void prevNumberStationLowMin() {
         radio.setNumberStation(-5);
         radio.setMinNumberStation(0);
-        assertEquals(0, radio.getNumberStation());
-        assertEquals(0, radio.getMinNumberStation());
+        assertEquals(9, radio.getNumberStation());
     }
 
     @Test
@@ -103,7 +99,6 @@ public class RadioTest {
     @Test
     void setNumberStation() {
         radio.setNumberStation(5);
-        radio.setNumberStation(15);
         assertEquals(5, radio.getNumberStation());
     }
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7ea38e-b7d4-4940-af90-97836fb2e5b9" name="Changes" comment="Radio problems">
+    <list default="true" id="5d7ea38e-b7d4-4940-af90-97836fb2e5b9" name="Changes" comment="Radioman changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Radio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RadioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RadioTest.java" afterDir="false" />
     </list>
@@ -63,7 +62,7 @@
       <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RadioTest">
+  <component name="RunManager" selected="JUnit.RadioTest.nextNumberStationMoreMax">
     <configuration name="RadioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radioman" />
       <option name="PACKAGE_NAME" value="" />
@@ -73,31 +72,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.decreaseVolume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.nextNumberStationMoreMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radioman" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RadioTest" />
-      <option name="METHOD_NAME" value="decreaseVolume" />
+      <option name="METHOD_NAME" value="nextNumberStationMoreMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.decreaseVolumeMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.numberStationMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radioman" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RadioTest" />
-      <option name="METHOD_NAME" value="decreaseVolumeMax" />
+      <option name="METHOD_NAME" value="numberStationMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RadioTest.increaseVolumeMoreMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RadioTest.prevNumberStationLowMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radioman" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RadioTest" />
-      <option name="METHOD_NAME" value="increaseVolumeMoreMax" />
+      <option name="METHOD_NAME" value="prevNumberStationLowMin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTest.setNumberStation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radioman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RadioTest" />
+      <option name="METHOD_NAME" value="setNumberStation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RadioTest.nextNumberStationMoreMax" />
         <item itemvalue="JUnit.RadioTest" />
-        <item itemvalue="JUnit.RadioTest.decreaseVolume" />
-        <item itemvalue="JUnit.RadioTest.decreaseVolumeMax" />
-        <item itemvalue="JUnit.RadioTest.increaseVolumeMoreMax" />
-        <item itemvalue="JUnit.RadioTest" />
+        <item itemvalue="JUnit.RadioTest.prevNumberStationLowMin" />
+        <item itemvalue="JUnit.RadioTest.setNumberStation" />
+        <item itemvalue="JUnit.RadioTest.numberStationMax" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659982094454</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Radioman changes">
+      <created>1661271684544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661271684544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +169,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Radio tests" />
     <MESSAGE value="Radio problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radio problems" />
+    <MESSAGE value="Radioman changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radioman changes" />
   </component>
 </project>
