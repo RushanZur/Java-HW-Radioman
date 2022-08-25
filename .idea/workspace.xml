@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d7ea38e-b7d4-4940-af90-97836fb2e5b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Radio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RadioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RadioTest.java" afterDir="false" />
     </list>
@@ -66,9 +65,10 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean te" />
+      <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RadioTest.decreaseVolumeMore">
     <configuration name="RadioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="radioman" />
       <option name="PACKAGE_NAME" value="" />
@@ -78,9 +78,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RadioTest.decreaseVolumeMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radioman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RadioTest" />
+      <option name="METHOD_NAME" value="decreaseVolumeMore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTest.increaseVolumeMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radioman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RadioTest" />
+      <option name="METHOD_NAME" value="increaseVolumeMore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTest.nextStationMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radioman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RadioTest" />
+      <option name="METHOD_NAME" value="nextStationMore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RadioTest.previousStationMore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="radioman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RadioTest" />
+      <option name="METHOD_NAME" value="previousStationMore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RadioTest.decreaseVolumeMore" />
+        <item itemvalue="JUnit.RadioTest.increaseVolumeMore" />
         <item itemvalue="JUnit.RadioTest" />
+        <item itemvalue="JUnit.RadioTest.nextStationMore" />
+        <item itemvalue="JUnit.RadioTest.previousStationMore" />
       </list>
     </recent_temporary>
   </component>

@@ -13,11 +13,11 @@ public class Radio {
     }
     public void setNumberStation(int numberStation) {
         if (numberStation > maxStation){
-            this.numberStation = maxStation;
+            this.numberStation = minStation;
             return;
         }
         if (numberStation < minStation) {
-            this.numberStation = minStation;
+            this.numberStation = maxStation;
             return;
         }
         this.numberStation = numberStation;
@@ -80,27 +80,27 @@ public class Radio {
         this.minStation = minStation;
     }
     public void increaseStation() {
-        if (numberStation >= maxStation) {
-            return;
+        if (numberStation > maxStation) {
+            numberStation = minStation;
         }
         numberStation++;
     }
 
     public void decreaseStation() {
-        if (numberStation <= minStation) {
-            return;
+        if (numberStation < minStation) {
+            numberStation = maxStation;
         }
         numberStation--;
     }
 
     public void increaseVolume() {
-        if (volume >= maxVolume) {
+        if (volume > maxVolume) {
             return;
         }
         volume++;
     }
     public void decreaseVolume() {
-        if (volume <= minVolume) {
+        if (volume < minVolume) {
             return;
         }
         volume--;
