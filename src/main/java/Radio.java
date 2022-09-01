@@ -80,27 +80,29 @@ public class Radio {
         this.minStation = minStation;
     }
     public void increaseStation() {
-        if (numberStation > maxStation) {
-            numberStation = minStation;
+        if (numberStation < maxStation) {
+            numberStation++;
+            return;
         }
-        numberStation++;
+        numberStation = minStation;
     }
 
     public void decreaseStation() {
-        if (numberStation < minStation) {
-            numberStation = maxStation;
+        if (numberStation > minStation) {
+            numberStation--;
+            return;
         }
-        numberStation--;
+        numberStation = maxStation;
     }
 
     public void increaseVolume() {
-        if (volume > maxVolume) {
+        if (volume >= maxVolume) {
             return;
         }
         volume++;
     }
     public void decreaseVolume() {
-        if (volume < minVolume) {
+        if (volume <= minVolume) {
             return;
         }
         volume--;
